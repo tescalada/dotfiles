@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #
-# Ansible managed
+# yadm managed from https://github.com/iancleary/dotfiles 
+# source with Ansible from https://github.com/iancleary/ansible-role-zsh_antibody
 #
 
 
