@@ -136,3 +136,7 @@ source $(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 sleep 1
+
+# remove username@hostname in prompt as advised at
+# https://github.com/ohmyzsh/ohmyzsh/issues/5581#issuecomment-256825141
+# prompt_context() {}
