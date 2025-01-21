@@ -12,11 +12,16 @@ cp ./.gitconfig ~
 #./install.sh
 #cd .. && rm -rf fonts
 
-# oh-my-zsh & plugins
+# install antidote
+git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
+
+# oh-my-zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 #zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 #zsh -c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
 cp ./.zshrc ~
+
+cp ./.zsh_plugins.txt ~
 
 ########################################################################################################################
 #### set agnoster as theme, this came from https://gist.github.com/corentinbettiol/21a6d4e942a0ee58d51acb7996697a88

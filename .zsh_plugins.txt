@@ -1,0 +1,11 @@
+
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib 
+ohmyzsh/ohmyzsh path:plugins/gitfast 
+ohmyzsh/ohmyzsh path:plugins/poetry 
+ohmyzsh/ohmyzsh path:plugins/yarn 
+ohmyzsh/ohmyzsh path:plugins/zsh 
+
+zsh-users/zsh-syntax-highlighting
+
+romkatv/powerlevel10k kind:fpath

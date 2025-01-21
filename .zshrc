@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 #
 # yadm managed from https://github.com/iancleary/dotfiles 
@@ -86,12 +86,15 @@ DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # https://github.com/getantibody/antibody/issues/261#issuecomment-533464072
-source <(antibody init)
-ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+#source <(antibody init)
+#ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 # https://github.com/getantibody/antibody/issues/261#issuecomment-616205908
-antibody bundle robbyrussell/oh-my-zsh path:lib path:plugins/gitfast path:plugins/poetry path:plugins/yarn path:plugins/zsh path:plugins/zsh-syntax-highlighting
+#antibody bundle robbyrussell/oh-my-zsh path:lib path:plugins/gitfast path:plugins/poetry path:plugins/yarn path:plugins/zsh path:plugins/zsh-syntax-highlighting
 
+
+source ~/.antidote/antidote.zsh
+antidote load
 
 # User configuration
 
@@ -122,7 +125,7 @@ alias ohmyzsh="nano ~/.oh-my-zsh"
 # apt/dnf upgrades
 alias full-upgrade="sudo apt update && sudo apt -y full-upgrade && sudo apt -y autoremove"
 
-source $(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+#source $(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 ### ----------------------------------------------
 # Please add per application scripts to the
@@ -133,6 +136,7 @@ source $(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-
 # This allows for modularity in your configuration.
 ### ----------------------------------------------
 
+autoload -Uz promptinit && promptinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 sleep 1
